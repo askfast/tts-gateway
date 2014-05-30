@@ -1,0 +1,26 @@
+{
+  "name": "tts-gateway",
+  "version": "0.1.0",
+  "description": "Text-to-Speech Gateway",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github/sven4ask/tts-gateway"
+  },
+  "keywords": [
+    "tts",
+    "gateway",
+    "cache"
+  ],
+  "author": "Sven Stam",
+  "license": "MIT",
+  "dependencies": {
+    "express": "~4.3.2",
+    "mongodb": "~1.4.5",
+    "gridfs-stream": "~0.5.1",
+    "request": "~2.36.0"
+  }
+}
