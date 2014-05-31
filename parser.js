@@ -51,7 +51,15 @@ Parser.parse = function (req, res, next) {
                     mode: 'w',
                     content_type: 'audio/wav'
                 });
-                request.get(url).pipe(writestream);
+
+                // Make sure only audio files get stored
+                var x = request.get(url).on('response', function(resp) {
+                    if(resp.headers['content-type'].indexOf('audio/wav')==-1) {
+                        x.pipe(res);
+                    } else {
+                        x.pipe(writestream);
+                    }
+                });
 
                 writestream.on('close', function (file) {
                     res.writeHead(200, {'Content-Type': file.contentType});
