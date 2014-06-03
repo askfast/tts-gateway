@@ -2,7 +2,7 @@
  * Created by Sven Stam on 30-05-14.
  */
 var express = require('express'),
-    Parser = require('./parser.js');
+    Parser = require('./lib/parser.js');
 
 var PORT = 3000;
 
