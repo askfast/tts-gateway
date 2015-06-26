@@ -6,7 +6,8 @@ var express = require('express'),
     eve = require('evejs'),
     router = require('./lib/router')
     bodyParser = require('body-parser'),
-    TtsAgent = require('./lib/ttsAgent');
+    TtsAgent = require('./lib/ttsAgent'),
+    logger = require('./lib/utils/logger');
 
 //setup eve
 eve.system.init({
@@ -33,4 +34,4 @@ app.use('/api', router);
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(PORT);
-console.log("TTS-Parser running on port: " + PORT);
+logger.info("TTS-Parser running on port: " + PORT);
