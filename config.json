@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "db": {
+      "url": "mongodb://localhost:27017/tts-gateway"
+    },
+    "port": 3000,
+    "agentPort": 3001
+},
+  "staging": {
+    "db": {
+      "url": "mongodb://mongo.internal:27017/sb-tts-gateway"
+    },
+    "port": 3000,
+    "agentPort": 3001
+},
+  "production": {
+    "db": {
+      "url": "mongodb://mongo.internal:27017/tts-gateway"
+    },
+    "port": 3000,
+    "agentPort": 3001
+  }
+}

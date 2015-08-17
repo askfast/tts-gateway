@@ -7,15 +7,16 @@ var express = require('express'),
     router = require('./lib/router')
     bodyParser = require('body-parser'),
     TtsAgent = require('./lib/ttsAgent'),
-    logger = require('./lib/utils/logger');
+    logger = require('./lib/utils/logger'),
+    config = require('./config.json')[ process.env.NODE_ENV || 'dev' ];
 
 //setup eve
 eve.system.init({
     transports: [{
         type: 'http',
-        port: 3001,
-        url: 'http://127.0.0.1:3000/agents/:id',
-        remoteUrl: 'http://127.0.0.1:3000/agents/:id',
+        port: config.agentPort,
+        url: 'http://127.0.0.1:' + config.agentPort + '/agents/:id',
+        remoteUrl: 'http://127.0.0.1:' + config.agentPort + '/agents/:id',
         localShortcut: true,
         default: true
     }]
@@ -24,7 +25,7 @@ eve.system.init({
 var ttsAgent = new TtsAgent('ttsAgent')
 
 //setup api server
-var PORT = 3001;
+var PORT = config.port;
 
 var app = express();
 
