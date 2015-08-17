@@ -13,7 +13,7 @@ var express = require('express'),
 eve.system.init({
     transports: [{
         type: 'http',
-        port: 3000,
+        port: 3001,
         url: 'http://127.0.0.1:3000/agents/:id',
         remoteUrl: 'http://127.0.0.1:3000/agents/:id',
         localShortcut: true,
