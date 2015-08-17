@@ -5,53 +5,76 @@
     },
     "port": 3000,
     "agentPort": 3001,
-    "slack" : {
-      "token" : ""
+    "acapela": {
+      "username": "",
+      "password": "",
+      "login": ""
     },
-    "acapela" : {
-      "username" : "",
-      "password" : "",
-      "login" : ""
+    "voicerss": {
+      "keys": []
     },
-    "voicerss" : {
-      "keys" : []
+    "log": {
+      "console": {
+        "level": "debug"
+      },
+      "slack": {
+        "level": "error",
+        "token": ""
+      }
     }
-
-},
+  },
   "staging": {
     "db": {
       "url": "mongodb://mongo.internal:27017/sb-tts-gateway"
     },
     "port": 3000,
     "agentPort": 3001,
-    "slack" : {
-      "token" : ""
+    "slack": {
+      "token": ""
     },
-    "acapela" : {
-      "username" : "",
-      "password" : "",
-      "login" : ""
+    "acapela": {
+      "username": "",
+      "password": "",
+      "login": ""
     },
-    "voicerss" : {
-      "keys" : []
+    "voicerss": {
+      "keys": []
+    },
+    "log": {
+      "console": {
+        "level": "debug"
+      },
+      "slack": {
+        "level": "error",
+        "token": ""
+      }
     }
-},
+  },
   "production": {
     "db": {
       "url": "mongodb://mongo.internal:27017/tts-gateway"
     },
     "port": 3000,
     "agentPort": 3001,
-    "slack" : {
-      "token" : ""
+    "slack": {
+      "token": ""
     },
-    "acapela" : {
-      "username" : "",
-      "password" : "",
-      "login" : ""
+    "acapela": {
+      "username": "",
+      "password": "",
+      "login": ""
     },
-    "voicerss" : {
-      "keys" : []
+    "voicerss": {
+      "keys": []
+    },
+    "log": {
+      "console": {
+        "level": "info"
+      },
+      "slack": {
+        "level": "error",
+        "token": ""
+      }
     }
   }
 }
